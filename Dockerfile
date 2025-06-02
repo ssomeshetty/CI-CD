@@ -1,5 +1,5 @@
-# Dockerfile
+# Use official Nginx image
+FROM nginx:alpine
 
-FROM openjdk:17
-COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Copy your HTML file to the default nginx public directory
+COPY index.html /usr/share/nginx/html/index.html
